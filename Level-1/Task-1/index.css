@@ -1,0 +1,275 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+    /* position: relative; */
+}
+html{
+    scroll-behavior: smooth;
+}
+#backPhoto img{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#background{
+    display: flex;
+    justify-content: center;
+}
+header{
+    background-color: #131a2f;
+    height: 121px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    margin: 5% 8%;
+    top: 5%;
+    position: sticky;
+    z-index: 2;
+}
+.logo{
+    font-family: Montserrat;
+    font-size: 28px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.moto{
+    color: #929292;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.13em;
+    padding: 2px 0px;
+    text-transform: uppercase;
+}
+.logo-plane{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 10px;
+}
+.logoDiv{
+    display: block;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 22%;
+}
+#navOptions ul{
+    display: flex;
+}
+#navOptions ul li{
+    list-style-type: none;
+    padding: 0px 22px;
+    cursor: pointer;
+    line-height: 116px;
+    border-bottom: #131a2f 4px solid;
+}
+.navOptions-a{
+    text-decoration: none;
+    color: white;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-weight: 400;
+    transition: 0.5s ease;
+}
+#navOptions ul li:hover .navOptions-a{
+    color: #fe435b;
+}
+#navOptions ul li:hover{
+    border-bottom: #fe435b 4px solid;
+}
+#headerSearch span{
+    font-size: 35px;
+    color: white;
+}
+#headerSearch{
+    background-color: #fe435b;
+    height: 100%;
+    width: 121px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+#headerSearch:hover{
+    background-color: #cc2438;
+}
+#shadow{
+    font-family: Montserrat;
+    font-size: 215px;
+    font-weight: 900;
+    color: #fdaa27;
+    opacity: 0.5;
+    text-transform: uppercase;
+    line-height: 0.75;
+    position: absolute;
+}
+#shadowCover{
+    font-family: Montserrat;
+    font-size: 72px;
+    color: white;
+    font-weight: 500;
+    position: absolute;
+}
+#shadowDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7% 0;
+}
+#backPhoto-second img{
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    position: absolute;
+    margin-top: 14.65%;
+}
+#backPhoto-second{
+    background: transparent;
+}
+.section{
+    color: white;
+    padding: 53px 35px;
+    margin-top: 18%;
+    display: block;
+    text-align: center;
+}
+.section ul{
+    display: flex;
+    position: relative;
+}
+.section ul li{
+    background: rgba(254, 64, 91, 0.79);
+    list-style-type: none;
+    padding: 2% 10%;
+    margin: 0 3%;
+    box-sizing: border-box;
+}
+.section p{
+    font-family: Montserrat;
+    padding: 1% 0;
+}
+.spot{
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: left;
+}
+.off{
+    font-size: 150px;
+    font-weight: 200;
+}
+.last{
+    font-size: 30px;
+    font-weight: 400;
+}
+.lorem{
+    font-size: 15px;
+    font-weight: 300;
+    margin: 4% 0;
+}
+.button{
+    text-decoration: none;
+}
+.button button{
+    border: none;
+    padding: 20px 40px;
+    background-color: #131a2f;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 300;
+    margin-top: 3%;
+}
+.section > div img{
+    height: 180px;
+    width: 200px;
+    position: absolute;
+    margin-left: 25px;
+    top: 105%;
+    z-index: 1;
+    display: flex;
+    justify-content: left;
+}
+#newsletter{
+    position: absolute;
+}
+#newsletter img{
+    height: 300px;
+    width: 100vw;
+}
+footer section{
+    background-color: rgba(0, 0, 0, 0.75);
+    position: relative;
+    box-sizing: border-box;
+    height: 300px;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer section p{
+    font-family: Montserrat;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 0.1rem;
+    margin-bottom: 40px;
+}
+footer section input{
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    border: 1px white solid;
+    background: transparent;
+    padding: 15px 30px;
+    padding-right: 450px;
+}
+footer section form a{
+    text-decoration: none;
+}
+footer section form a button{
+    border: none;
+    background-color: #fe435b;
+    color: white;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 40px;
+    margin-left: 20px;
+    transition: 0.5s ease;
+}
+footer section form a button:hover{
+    background-color: #cc2438;
+}
+footer .logoDiv{
+    height: auto;
+    width: 100vw;
+    background-color: #131a2f;
+    padding: 20px 0;
+}
+footer .logo-plane{
+    position: relative;
+    margin-right: 170px;
+    z-index: 1;
+}

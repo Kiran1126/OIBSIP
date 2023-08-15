@@ -1,0 +1,1022 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: white;
+    color: black;
+    overflow-x: hidden;
+}
+#align-body{
+    overflow: hidden;
+}
+section > section { 
+    float:right;
+}
+header{
+    background: linear-gradient(45deg, white, rgb(219, 210, 210));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 17vw;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    text-align: center;
+}
+#my-image{
+    border-radius: 100%;
+    height: 11vw;
+    width: 11vw;
+    margin: 1.5vw 0vw;
+    border: none;
+}
+#name{
+    color: black;
+    font-family: Montserrat;
+    font-size: 1.5vw;
+    font-weight: 500;
+    border-bottom: 0.1vw solid black;
+    padding-bottom: 3.5%;
+    opacity: 0.8;
+}
+nav{
+    margin-top: 3vw;
+}
+.nav-options a{
+    color: black;
+    font-family: Montserrat;
+    font-size: 1.2vw;
+    cursor: pointer;
+    text-decoration: none;
+}
+nav ul{
+    list-style-type: none;
+}
+.nav-options{
+    margin: 2.35vw 0vw;
+    text-align: left;
+    position: relative;
+}
+.nav-options a::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    border-radius: 30px;
+    bottom: -7px;
+    width: 0;
+    background: linear-gradient(45deg,cyan,blue);  
+    transition: all 0.5s ease;
+}
+.nav-options a:hover{
+    background: linear-gradient(45deg,cyan,blue);
+    transition: all 0.5s ease;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.nav-options a:hover::before{
+    width: 90%;
+}
+#footer-icons{
+    padding: 1.7vw 0vw;
+}
+#footer-icons .social .icon i{
+    font-size: 1.25vw;
+    color: black;
+    margin: 0px 0.85vw;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#footer-icons .social{
+    list-style-type: none;
+    text-decoration: none;
+    display: inline-flex;
+}
+#footer-icons .social .icon i:hover{
+    color: cyan;
+}
+/* hero section starts from here */
+#body{
+    width: 83%;
+    height: 100%;
+}
+#home-background{
+    background-image: linear-gradient(rgba(0,0,0.5,0),rgba(0, 0, 0.5,1));
+    height: 100vh;
+    width: auto;
+}
+.backVideo{
+    height: 100vh; 
+    width: 100vw; 
+    object-fit: cover; 
+    position: absolute; 
+    z-index: -1;
+}
+.centerBnrP{
+    padding: 15% 0;
+    display: block;
+}
+.fixedText{
+    font-family: Montserrat;
+    font-size: 2vw;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+}
+.bold.fixedText{
+    font-size: 2.25vw;
+    font-weight: 700;
+}
+#animateWords .fixedText{
+    font-size: 4vw;
+    font-weight: 700;
+    margin: 3vw 0;
+}
+#movingText{
+    color: rgb(241, 192, 59);
+    font-family: Montserrat;
+    font-size: 4vw;
+    font-weight: 700;
+    margin-left: 0.65vw;
+    border-right: 5px solid rgb(241, 192, 59);
+} 
+#animateWords{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#btnHire{
+    border: 1px solid rgb(241, 192, 59);
+    font-family: Montserrat;
+    font-size: 1.25vw;
+    color: rgb(241, 192, 59);
+    padding: 0.75vw 1.75vw;
+    border-radius: 40px;
+    background: transparent;
+    margin: 3vw 0;
+}
+#btnHire:hover{
+    background-color: rgb(0, 128, 111);
+    color: #fff;
+    border: 1px solid rgb(0, 128, 111);
+    transition: 0.7s ease;
+    cursor: pointer;
+}
+form{
+    display: flex;
+    justify-content: center;
+}
+#more-details{
+    text-align: center;
+    margin-top: 1.5%;
+}
+#more-details a{
+    text-decoration: none;
+}
+#more-details a span{
+    cursor: pointer;
+    font-size: 2.5vw;
+    color: rgb(255, 255, 255);
+}
+.shadow{
+    position: relative;
+    font-size: 9vw;
+    font-weight: 900;
+    font-family: Montserrat;
+    color: rgb(78, 79, 235);
+    opacity: 0;
+    transform: translateX(-40%);
+    transition: transform 1s ease;
+}
+.shadow.show{
+    transform: translateX(0);
+    opacity: 0.1;
+}
+.body-text-shadow{
+    margin-top: 3%; 
+    font-family: Montserrat;
+    font-size: 3.5vw;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    position: absolute;
+    transform: translateX(100%);
+    transition: transform 1s ease;
+    opacity: 0;
+}
+.body-text-shadow.show{
+    transform: translateX(0);
+    opacity: 1;
+}
+.textShadowBorder{
+    border-bottom: 0.3vw rgb(6, 143, 255) solid;
+    width: 9%;
+    margin-top: 7.5%;
+    position: absolute;
+    transform: translateX(100%);
+    transition: transform 1s ease;
+    opacity: 0;
+}
+.textShadowBorder.scrollAnimation.show{
+    transform: translateX(0);
+    opacity: 0.65;
+}
+.shadow-text-div{
+    display: flex;
+    justify-content: center;
+    padding: 5% 0%;
+}
+#about{
+    background-color: rgb(247, 236, 222);
+    padding-bottom: 2%;
+}
+.about-me{
+    font-family: Montserrat;
+    font-size: 1.25vw;
+    font-weight: 600;
+    color: black;
+    opacity: 0.75;
+}
+#margin-about-me{
+    margin-right: 13%;
+    margin-left: 5%;
+}
+#about-name{
+    color: rgb(26, 139, 184);
+}
+#align-about-me{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    margin-bottom: 3%;
+}
+#inline-about-me{
+    display: inline-block;
+}
+.about-more{
+    font-family: Montserrat;
+    font-size: 1.25vw;
+    font-weight: 700;
+    color: black;
+    margin: 3% 0%;
+    opacity: 0.75;
+}
+#align-about{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(243, 235, 235);
+    margin: 0% 5%;
+    padding: 2vw 0vw;
+    border-radius: 10px;
+    box-shadow: rgba(50,50,93,0.25) 0px 13px 27px -5px, rgba(0,0,0,0.3) 0px 8px 16px -8px;  
+}
+/* Code for pop-up animation */
+.scrollAnimation.pop{
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.scrollAnimation.pop.show{
+    transform: translateY(0);
+    opacity: 1;
+}
+/* Code for pop-up animation */
+#about-email{
+    color: rgb(26, 139, 184);
+    text-decoration: none;
+}
+#align-about-email{
+    display: inline-flex;
+}
+#inline-about-more{
+    display: block;
+    margin-right: 10%;
+    float: right; 
+}
+#inline-cvButton{
+    display: block;
+}
+#inline-about-more ul{
+    list-style-type: none;
+    margin-bottom: 10%;
+}
+#inline-about-more ul li{
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+#inline-about-more ul li:last-child{
+    border: none;
+}
+/* Code for about CV button */
+#about-cv-button{
+    text-align: center;
+    float: left;
+}
+#about-cv-button button{
+    padding: 1vw 2vw;
+    margin: 2% 0%;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.7s all ease;
+    border: rgba(0,0,0,0.75) 1px solid;
+    border-radius: 40px; 
+    color: rgba(0,0,0,0.8);
+    font-family: Montserrat;
+    font-size: 1.25vw;
+    font-weight: 500;
+    display: inline-flex;
+}
+#about-cv-button button span{
+    font-size: 1.7vw;
+}
+#about-cv-button button:hover{
+    background-color: rgb(6, 6, 44);
+    border: 1px rgb(6, 6, 44) solid;    
+    color: white
+}
+/* About-me experience data section */
+#data ul{
+    display: flex;
+    justify-content: space-around;
+    padding: 7% 13%;
+}
+#data ul li{
+    list-style-type: none;
+    border-right: 1px rgba(0,0,0,0.3) solid;
+    padding: 1% 5%;
+}
+#data ul li:last-child{
+    border: none;
+}
+#data ul li p{
+    display: block;
+    text-align: center;
+}
+.dataNumber{
+    font-family: Montserrat;
+    font-size: 3vw;
+    color: black;
+    font-weight: 600;
+    opacity: 0.75;
+}
+.dataDomain{
+    font-family: sans-serif;
+    font-size: 1.5vw;
+    color: black;
+    font-weight: 400;
+    margin-top: 4%;
+    opacity: 0.7;
+}
+.data{
+    transform: translateX(-100%);
+    transition: transform 1s ease-out;
+    opacity: 0;
+}
+.data.scrollAnimation.show{
+    transform: translateX(0);
+    opacity: 0.85;
+}
+/* About-me experience data section */
+/* Code for about CV button */
+#service-html{
+    background-color: rgb(233, 218, 193);
+    padding-bottom: 7%;
+    /* height: 100vh;
+    width: auto; */
+}
+#service{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(243, 235, 235);
+    margin: 5% 19%;
+    padding: 2vw 0vw;
+    border-radius: 10px;
+    box-shadow: rgba(50,50,93,0.25) 0px 13px 27px -5px, rgba(0,0,0,0.3) 0px 8px 16px -8px;
+}
+.align-item-service{
+    display: flex;
+    flex-direction: row;
+    margin: 3vw 4vw;
+}
+.align-item-service span{
+    margin-right: 1.5vw;
+    font-size: 2vw;
+    color: cornflowerblue;
+}
+.align-item-service p{
+    font-family: Montserrat;
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: black;
+}
+.inline-item-service{
+    display: block;
+}
+/* resume section starts from here */
+#resume{
+    padding-bottom: 7%;
+    /* background-color: rgb(84, 186, 185); */
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+#resume .shadow-text-div .body-text-shadow{
+    color: white;
+}
+#resume .shadow-text-div .textShadowBorder{
+    border-bottom: 0.3vw gainsboro solid;
+    opacity: 0.9;
+}
+#resume .shadow-text-div .shadow{
+    color: wheat;
+    opacity: 0.3;
+}
+.edu-skill{
+    /* display: inline-flex; */
+    margin-bottom: 3vw;
+    transform: translateX(-40%);
+    transition: transform 1s ease;
+    opacity: 0;
+}
+.edu-skill.right{
+    transform: translateX(40%);
+}
+.edu-skill.scrollAnimation.show{
+    transform: translateX(0);
+    opacity: 1;
+}
+.edu-skill p{
+    font-family: Montserrat;
+    font-size: 2.5vw;
+    font-weight: 700;
+    color: white;
+}
+#align-edu-skill{
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+}
+#education{
+    display: block;
+    text-align: center;
+    margin-right: 3%;
+}
+#internship{
+    display: block;
+    text-align: center;
+}
+.edu-skill-box{
+    height: 10vw;
+    width: 35vw;
+    padding: 1.25vw 0vw; 
+    background-color: rgb(243, 235, 235);  
+    border-radius: 7px;
+    box-shadow: 4px 4px 5px rgb(66, 63, 63);
+    text-align: center;
+    transform: translateX(-25%);
+    opacity: 0;
+    transition: transform 1s ease;
+}
+.edu-skill-box.right{
+    transform: translateX(25%);
+}
+.edu-skill-box.scrollAnimation.show{
+    transform: translateX(0);
+    opacity: 0.8;
+}
+.time{
+    background-color: rgb(49, 91, 107);
+    border-radius: 5px; 
+    color: white;
+    margin: 0.2vw 12vw;  
+    font-family: Montserrat;
+    font-size: 1.5vw;
+}
+.domain{
+    font-family: Montserrat;
+    font-size: 2vw;
+    font-weight: 600;
+    color: rgb(26, 139, 184);
+    padding: 2% 0%;
+}
+.name{
+    font-family: Montserrat;
+    font-size: 1.25vw;
+    font-weight: 600;
+}
+.intern-time.time{
+    margin: 0.2vw 8vw; 
+}
+#school{
+    margin-top: 7%;
+}
+#skill-1{
+    margin-bottom: 7%;
+}
+.edu-skill.skill p{
+    text-align: center;
+}
+.edu-skill.skill ul{
+    display: flex;
+    justify-content: space-around;
+}
+.edu-skill.skill ul li{
+    text-align: center;
+    list-style-type: none;
+}
+.edu-skill.skill ul li div{
+    margin: 10% 0%;
+}
+.edu-skill.skill label{
+    font-family: sans-serif;
+    font-size: 1.5vw;
+    color: aliceblue;
+    font-weight: 400;
+    display: flex;
+    justify-content: left;
+}
+/* Code for CV button */
+#cv-button{
+    text-align: center;
+}
+#cv-button button{
+    padding: 1vw 1.5vw;
+    margin: 0.7% 0%;
+    cursor: pointer;
+    transition: 0.7s all ease;
+    border: 1px solid white;
+    border-radius: 40px; 
+    color: white;
+    font-family: Montserrat;
+    font-size: 1.25vw;
+    font-weight: 500;
+    display: inline-flex;
+    background: transparent;
+}
+#cv-button button span{
+    font-size: 1.7vw;
+}
+#cv-button button:hover{
+    background-color: yellowgreen;
+    border: 1px solid yellowgreen;
+}
+/* Code for CV button */
+#body footer{
+    background-color: #343a40!important;
+}
+#contact{
+    padding-bottom: 0%;
+    padding-top: 3%;
+}
+#contact .shadow{
+    color: white;
+}
+#contact .body-text-shadow{
+    color: white;
+}
+.body-p{
+    font-size: 1.15vw;
+    font-family: Montserrat;
+    font-weight: 500;
+    color: white;
+    padding: 0vw 3vw;
+}
+.body-p.body-heading{
+    font-weight: 600;
+    margin: 2vw 0vw;
+}
+.body-p.body-p-address{
+    padding: 0.3vw 3vw;
+}
+#contact-details{
+    margin: 2vw 3.25vw;
+}
+#contact-details ul li span{
+    color: cornflowerblue;
+    font-size: 1.85vw;
+}
+#contact-details ul li{
+    display: flex;
+    margin: 0.7vw 0vw;
+}
+#body footer #body-footer-icons .social i{
+    color: white;
+    margin: 0vw 1.25vw;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 1.5vw;
+}
+#body footer #body-footer-icons .social{
+    display: inline-flex;
+    list-style-type: none;
+    text-decoration: none;
+}
+#body footer #body-footer-icons .social i:hover{
+    color: cyan;
+}
+#body footer #body-footer-icons{
+    margin: 0vw 2vw;
+}
+#inline-follow{
+    display: inline-block;
+}
+.send-details{
+    background-color: #232a31;
+    color: white;
+    /* padding: 1.25vw 2.2vw; */
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-family: Montserrat;
+    font-size: 15px;
+    margin: 0px 5px;
+    font-weight: 400;
+    text-align: left;
+    border: #232a31 0.5px solid;
+}
+#align-send-details{
+    display: inline-flex;
+    margin: 0vw 20px;
+}
+#send-msg{
+    /* padding: 3vw 12.4vw; */
+    padding: 25px 115px;
+    margin: 15px 25px;
+    border: #232a31 0.5px solid;
+}
+#note{
+    text-align: left;
+}
+#send{
+    background-color: cornflowerblue;
+    color: white;
+    font-family: Montserrat;
+    font-size: 1.3vw;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 0.95vw 2vw;
+    margin: 10px 120px;
+    display: inline-flex;
+    border-radius: 40px;
+    border: none;
+    transition: 0.7s ease all;
+}
+#send span{
+    font-size: 1.8vw;
+}
+#send:hover{
+    background-color: yellowgreen;
+}
+#details{
+    display: block;
+}
+#needs_enquiry_form{
+    display: block;
+}
+#align-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 0vw;
+    padding: 2vw 0vw;
+}
+#footer-logo{
+    font-size: 3vw;
+    font-weight: 400;
+    font-family: Zen Tokyo Zoo;
+    color: cornflowerblue;
+}
+#brand{
+    font-family: Montserrat;
+    font-size: 1vw;
+    color: white;
+    font-weight: 400;
+}
+#footer-brand{
+    text-align: center;
+    background-color: #252b33;
+    padding: 1.3vw 2vw;
+}
+/* Code for smartphone use */
+#menubar span{
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #fff;
+}
+#menubar{
+    margin-left: 78%;
+}
+#click{
+    display: none;
+}
+#Branding p{
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    display: none;
+    color: #fff;
+}
+#responsiveNavbar{
+    background-color: black;
+    top: 0px;
+    width: 100%;
+    padding: 2% 2%;
+    display: none;
+}
+@media (max-width:700px){
+    /* navigation panel for smartphone use */
+    #menubar span{
+        float: right;
+        display: block;
+    }
+    header{
+        display: none;
+        width: 0%;
+    }
+    #align-body #body{
+        width: 100vw;
+    }
+    #Branding p{
+        display: block;
+        float: left;
+    }
+    #responsiveNavbar{
+        display: inline-flex;
+        /* justify-content: space-between; */
+    }
+    section > section { 
+        float: none;
+    }
+    #align-bnr{
+        justify-content: space-around;
+    }
+    #navOptionsDiv_res ul{
+        position: absolute;
+        display: none;
+        background-color: white; 
+        right: 2%;
+        top: 7%;
+        padding: 0.1% 3%;
+        border-radius: 5px;
+        list-style-type: none;
+    }
+    .nav-options{
+        margin: 20px 0;
+    }
+    .nav-options a{
+        font-size: 15px;
+    }
+    .nav-options a:hover::before{
+        width: 120%;
+    }
+    #click:checked ~ #navOptionsDiv_res ul{
+        display: block;
+    }
+    /* navigation panel for smartphone use */
+    /* home background for smarphone use */
+    .centerBnrP{
+        padding-top: 90px;
+    }
+    .fixedText{
+        font-size: 25px;
+    }
+    .bold.fixedText{
+        font-weight: 600;
+        font-size: 33px;
+    }
+    #animateWords .fixedText{
+        font-size: 40px;
+        margin: 40px 0px;
+    }
+    #movingText{
+        font-size: 40px;
+        margin-left: 15px;
+        border-right: 3px solid rgb(241, 192, 59);
+    }
+    #btnHire{
+        margin: 80px 0;
+        padding: 10px 30px;
+        font-size: 3vw;
+        border-radius: 30px;
+        border: 0.5px solid rgb(241, 192, 59);
+    }
+    #more-details a span{
+        font-size: 30px;
+    }
+    /* about section */
+    .shadow{
+        font-size: 60px;
+        font-weight: 800;
+    }
+    .body-text-shadow{
+        font-size: 25px;
+        margin-top: 20px;
+    }
+    .textShadowBorder{
+        border-bottom: 3px rgb(6, 143, 255) solid;
+        width: 15%;
+        margin-top: 52px;
+    }
+    #align-about{
+        flex-direction: column;
+    }
+    #inline-cvButton{
+        display: flex;
+        flex-direction: column;
+        margin: 3% 5%;
+    }
+    #about-cv-button{
+        display: flex;
+        justify-content: center;
+    }
+    #inline-cvButton button{
+        margin-top: 2%;
+        font-size: 15px;
+        padding: 10px 25px;
+        border: rgba(0,0,0,0.5) solid 0.5px;
+    }
+    #inline-cvButton button span{
+        font-size: 20px;
+    }
+    #align-about p{
+        font-size: 15px;
+    }
+    #align-about a{
+        font-size: 15px;
+    }
+    .dataNumber{
+        font-size: 30px;
+    }
+    .dataDomain{
+        font-size: 15px;
+    }
+    /* about section */
+    /* service part */
+    #service p{
+        font-size: 15px;
+        margin: 9px 10px;
+    }
+    #service span{
+        font-size: 20px;
+        margin: 9px 0;
+    }
+    #service{
+        display: block;
+        margin: 105px 25spx;
+        padding: 2vw 7vw;
+        opacity: 0.75;
+    }
+    .align-item-service{
+        display: flex;
+        justify-content: center;
+    }
+    /* service part */
+    /* resume secton */
+    #resume .shadow-text-div .textShadowBorder{
+        border-bottom: 0.75vw gainsboro solid;
+    }
+    #align-edu-skill #education{
+        display: block;
+    }
+    .skill.edu-skill ul li div label{
+        font-size: 15px;
+    }
+    #cv-button button{
+        font-size: 15px;
+        padding: 10px 25px;
+        margin: 50px 0px;
+    }
+    #cv-button button span{
+        font-size: 21px;
+    }
+    .edu-skill-box{
+        height: 100px;
+        width: 300px;
+        padding: 15px 0;
+    }
+    #resume .edu-skill p{
+        font-size: 25px;
+        margin: 25px 0;
+    }
+    #resume .edu-skill-box p{
+        font-size: 15px;
+    }
+    #resume .edu-skill.skill ul{
+        display: block;
+    }
+    #resume .edu-skill.skill label{
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    #align-edu-skill{
+        display: block;
+    }
+    .edu-skill-box{
+        height: 25vw;
+        width: 70vw;
+        padding: 4vw 5vw; 
+        margin: 5px 0;
+        transform: translateX(-25%);
+        opacity: 0;
+        transition: transform 1s ease;
+    }
+    .edu-skill-box.right{
+        transform: translateX(150px);
+    }
+    .edu-skill-box.scrollAnimation.show{
+        transform: translateX(70px);
+    }
+    .time{
+        margin: 0.2vw 15vw;
+    }
+    .intern-time.time{
+        margin: 0.2vw 7vw; 
+    }
+    .edu-skill{
+        margin: 15px 0px;
+    }
+    /* resume section */
+    /* footer part */
+    .body-heading{
+        margin: 35px 35px;
+    }
+    .body-heading.body-p{
+        font-size: 22px;
+        margin: 20px 0px;
+    }
+    .body-p{
+        font-size: 13px;
+        margin: 5px 0;
+    }
+    .body-p-address{
+        font-size: 16px;
+        margin: 5px 0;
+    }
+    #contact-details{
+        margin: 2vw 0vw;
+        display: flex;
+        justify-content: center;
+    }
+    #contact-details ul li p{
+        font-size: 16px;
+    }
+    #contact-details ul li span{
+        font-size: 20px;
+    }
+    #contact-details ul li:last-child{
+        display: flex;
+        justify-content: center;
+    }
+    #align-details div > div li span{
+        font-size: 23px;
+    }
+    #body footer #body-footer-icons .social i{
+        font-size: 19px;
+        margin: 10px 18px;
+    } 
+    #align-details{
+        display: block;
+        text-align: center;
+        padding: 30px 0;
+    }
+    #align-send-details{
+        display: block;
+    }
+    #send{
+        font-size: 15px;
+        padding: 10px 25px;
+        margin-left: 63px;
+    }
+    #send span{
+        font-size: 20px;
+    }
+    #note{
+        text-align: center;
+    }
+    .send-details{
+        font-size: 15px;
+        padding: 5px 50px;
+        margin: 3px 0px;
+    }
+    #send-msg{
+        font-size: 15px;
+        padding: 20px 50px;
+        margin: 5px 20px;
+    }
+    #send{
+        text-align: center;
+        margin: 20px 0px;
+    }
+    #footer-logo{
+        font-size: 40px;
+    }
+    #brand{
+        font-size: 15px;
+        margin: 10px 0;
+    }
+}
+/* Code for smartphone use */
